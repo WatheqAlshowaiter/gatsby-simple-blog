@@ -119,4 +119,18 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 
 
 ## TODO
-- [ ]
+- [ ] enable Arabic excerpts
+- [ ] fix date formatting to YYYY-MM-DD
+- [ ] Change the color (and maybe styling) of the tags
+- [ ] Change the color of the pagination
+- [ ] Change font to better font (Dubai font for example)
+- [ ] remain the header title the same color and size in pagination
+- [ ] Change the footer text to (copyright or made by me)
+- [ ] fix the breadcrumb in the header in Arabic language and translate the text
+- [ ] remain the header title the same color in the blog page
+- [ ] remove time to read in the blog post page
+- [ ] fix the direction of the similar posts in the footer
+- [ ] fix the indentation of the tags: `ul, ol, blockquote` blog post page
+- [ ] fix the position of `relative posts`
+- [ ] combine this project with netlify-cms
+
