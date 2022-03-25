@@ -192,7 +192,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
                     directoryName
                   }
                   frontmatter {
-                    date(formatString: "MMMM DD, YYYY")
+                    date(formatString: "YYYY/MM/DD")
                     title
                     tags
                   }

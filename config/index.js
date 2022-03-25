@@ -2,7 +2,7 @@ const site = {
   pathPrefix: '/gatsby-simple-blog',
   title: 'مدونة حمود الباهلي',
   author: 'حمود الباهلي',
-  description: 'حمود الباهلي - معد بودكاست لمحات، مهتم بالتاريخ، والكتابة والسرد القصصي',
+  description: 'حمود الباهلي - معد بودكاست لمحات. مهتم بالتاريخ والكتابة والسرد القصصي.',
   siteUrl: 'https://gatsby-simple-blog.thundermiracle.com/',
   twitter: 'homoud_albahli',
   github: '',

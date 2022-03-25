@@ -9,7 +9,7 @@ import { formatDate } from 'utils/i18n';
 
 import TagList from '../TagList';
 
-const PostAbbrev = function({ slug, title, date, timeToRead, excerpt, tags, base }) {
+const PostAbbrev = function({ slug, title, date, excerpt, tags, base }) {
   let excerptPart;
   if (excerpt) {
     excerptPart = (
@@ -38,12 +38,12 @@ const PostAbbrev = function({ slug, title, date, timeToRead, excerpt, tags, base
             marginBottom: rhythm(1 / 4),
           }}
         >
-          <Link style={{ boxShadow: 'none' }} to={slug} rel="bookmark">
+          <Link style={{ boxShadow: 'none', color:'var(--textTitle)' }} to={slug} rel="bookmark">
             {title}
           </Link>
         </h3>
         {tagsPart}
-        <small>{`${formatDate(date)} • ${formatReadingTime(timeToRead)}`}</small>
+        <small>{`${formatDate(date)}`}</small>
         {excerptPart}
       </header>
     </article>
@@ -54,7 +54,6 @@ PostAbbrev.propTypes = {
   slug: PropTypes.string.isRequired,
   title: PropTypes.string,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.number.isRequired,
   excerpt: PropTypes.string,
   tags: PropTypes.array,
   base: PropTypes.string,
