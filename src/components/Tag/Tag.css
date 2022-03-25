@@ -20,14 +20,14 @@
   line-height: 30px;
   padding: 0 1em 0 0.75em;
   background-color: var(--tag-bg, #3498db);
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
   color: var(--tag-color, #fff);
   font-size: 13px;
   text-decoration: none;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-.link::before {
+/* .link::before {
   position: absolute;
   top: 0;
   left: -15px;
@@ -39,8 +39,8 @@
   border-top-left-radius: 30px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-.link::after {
+} */
+/* .link::after {
   position: absolute;
   top: 50%;
   left: -6px;
@@ -52,9 +52,9 @@
   margin-top: -3px;
   background-color: var(--tag-color, #fff);
   border-radius: 100%;
-}
+} */
 .link:hover {
-  background-color: #555;
+  background-color: #55acee;
   color: var(--tag-color, #fff);
 }
 .link:hover::before {

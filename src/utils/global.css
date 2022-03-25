@@ -15,13 +15,13 @@ body.light {
   --hr: hsla(0, 0%, 0%, 0.2);
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
-  --tag-bg: #f7a046;
+  --tag-bg: #55acee;
   --tag-color: #ffffff;
   --breadcrumbsTextColor: #a1c4e9;
   --breadcrumbsTextColorActive: #888888;
   --linkBackground: rgba(187, 239, 253, 0.3);
   --linkBorder: rgba(0, 0, 0, 0.2);
-  --pagination-bg: #f7a046;
+  --pagination-bg: #55acee;
 }
 
 body.dark {
@@ -109,7 +109,7 @@ pre[class*='language-'] ::selection {
 }
 
 /* Inline code */
-:not(pre) > code[class*='language-'] {
+:not(pre)>code[class*='language-'] {
   border-radius: 0.3em;
   background: var(--inlineCode-bg);
   color: var(--inlineCode-text);
@@ -216,4 +216,22 @@ pre[data-line] {
 
 .gatsby-remark-prismjs-copy-button-container {
   direction: ltr;
+}
+
+/* ul with li within */
+ul li {
+  margin-right: 1.75em;
+}
+
+ol li {
+  margin-right: 1.75em;
+}
+
+blockquote {
+  margin-right: 1.75rem;
+  margin-left: -1.75rem;
+  padding-left: 0;
+  padding-right: 1.42188rem;
+  border-right: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
+  border-left: none;
 }

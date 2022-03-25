@@ -43,7 +43,7 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
         }}
       >
         {formatDate(post.frontmatter.date)}
-        {` • ${formatReadingTime(post.timeToRead)}`}
+        {/* {formatReadingTime(post.timeToRead)} */}
       </p>
 
       {tags}
@@ -77,14 +77,14 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
+            → {previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
             <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
+              {next.frontmatter.title} ←
             </Link>
           )}
         </li>

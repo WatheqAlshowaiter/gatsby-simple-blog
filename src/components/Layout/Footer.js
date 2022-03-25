@@ -12,13 +12,13 @@ const Footer = function() {
       }}
     >
       <p>
-        Made of{' '}
+        تطوير {' '}
         <a
-          href="https://github.com/thundermiracle/gatsby-simple-blog"
+          href="https://watheq.xyz/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-simple-blog
+          واثق الشويطر
         </a>
       </p>
     </footer>

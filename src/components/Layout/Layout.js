@@ -28,7 +28,7 @@ const Layout = function ({ children, location, title, breadcrumbs }) {
         fontFamily: 'var(--systemFont)',
       }}
     >
-      {/**  <LanguageBar lang={lang} />  */}
+      <LanguageBar lang={lang} />
       <div
         style={{
           marginLeft: 'auto',

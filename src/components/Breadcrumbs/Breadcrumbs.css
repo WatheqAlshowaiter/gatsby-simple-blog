@@ -24,8 +24,8 @@
   position: relative;
   height: calc(var(--cssuiBreadcrumbsDividerSize) + var(--cssuiBreadcrumbsIndent));
 
-  padding-right: calc(var(--cssuiBreadcrumbsDividerSize) + var(--cssuiBreadcrumbsIndent));
-  margin-right: var(--cssuiBreadcrumbsIndent);
+  padding-left: calc(var(--cssuiBreadcrumbsDividerSize) + var(--cssuiBreadcrumbsIndent));
+  margin-left: var(--cssuiBreadcrumbsIndent);
   margin-bottom: 0;
 
   color: var(--cssuiBreadcrumbsTextColor);
@@ -48,7 +48,8 @@
 
   position: absolute;
   top: 50%;
-  right: 0;
+  /* right: 0; */
+  left: 0;
   transform: translateY(-50%);
 }
 

@@ -30,7 +30,7 @@ const RelativePost = function({ postNode }) {
           </h3>
           <small
             style={{
-              marginLeft: rhythm(1 / 4),
+              marginRight: rhythm(1 / 4),
             }}
           >
             {formatDate(date)}

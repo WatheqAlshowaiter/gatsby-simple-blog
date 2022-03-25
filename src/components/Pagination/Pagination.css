@@ -13,7 +13,8 @@
   transition: background-color 0.3s;
 }
 .pagination a:hover {
-  background-color: #ddd;
+  background-color: #a1c4e9;
+  color: white;
   border-radius: 8px;
 }
 .pagination span {
