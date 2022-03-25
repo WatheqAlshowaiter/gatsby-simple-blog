@@ -1,14 +1,14 @@
 const site = {
   pathPrefix: '/gatsby-simple-blog',
-  title: 'Gatsby Starter Blog',
-  author: 'Kyle Mathews',
-  description: 'A starter blog demonstrating what Gatsby can do.',
+  title: 'مدونة حمود الباهلي',
+  author: 'حمود الباهلي',
+  description: 'حمود الباهلي - معد بودكاست لمحات، مهتم بالتاريخ، والكتابة والسرد القصصي',
   siteUrl: 'https://gatsby-simple-blog.thundermiracle.com/',
-  twitter: 'kylemathews',
-  github: 'thundermiracle',
-  medium: 'thundermiracle',
-  facebook: 'thundermiracle',
-  disqusShortName: 'gatsby-simple-blog',
+  twitter: 'homoud_albahli',
+  github: '',
+  medium: '',
+  facebook: '',
+  disqusShortName: '',
   googleTrackingId: 'G-E7NM1ZBB2T',
   lang: 'en',
   displayTranslations: true,
@@ -18,6 +18,7 @@ const site = {
 const supportedLanguages = {
   en: 'English',
   'zh-hans': '简体中文',
+  ar: 'العربية',
 };
 
 module.exports = {

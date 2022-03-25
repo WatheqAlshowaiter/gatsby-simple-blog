@@ -1,0 +1,13 @@
+.gt-social a {
+  opacity: 0.8;
+}
+
+.gt-social a:hover {
+  opacity: 1;
+}
+
+.gt-social svg {
+  height: 32px;
+  width: 32px;
+  fill: #55acee;
+}

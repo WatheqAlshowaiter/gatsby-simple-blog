@@ -14,7 +14,7 @@ import './Bio.css';
 
 import SocialBar from '../SocialBar';
 
-const Bio = function() {
+const Bio = function () {
   return (
     <StaticQuery
       // eslint-disable-next-line no-use-before-define
@@ -33,7 +33,7 @@ const Bio = function() {
                 alt={author}
                 className="pic"
                 style={{
-                  marginRight: rhythm(1 / 2),
+                  marginLeft: rhythm(1 / 2),
                 }}
                 imgStyle={{
                   borderRadius: '50%',
@@ -41,7 +41,7 @@ const Bio = function() {
               />
               <div className="description">
                 <p>{description}</p>
-                <SocialBar />
+                {/* <SocialBar /> */}
               </div>
             </div>
           </div>
@@ -49,11 +49,11 @@ const Bio = function() {
       }}
     />
   );
-}
+};
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpeg/" }) {
       childImageSharp {
         gatsbyImageData(layout: FIXED, width: 70, height: 70)
       }

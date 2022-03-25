@@ -3,6 +3,7 @@ body {
   background-color: var(--bg);
   --breadcrumbsDividerSize: 20px;
   --systemFont: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
+  direction: rtl;
 }
 
 body.light {
@@ -74,6 +75,8 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+
+  direction: ltr;
 }
 
 /* Code blocks */
@@ -209,4 +212,8 @@ pre[data-line] {
 .gatsby-highlight pre[class*='language-'] {
   float: left;
   min-width: 100%;
+}
+
+.gatsby-remark-prismjs-copy-button-container {
+  direction: ltr;
 }

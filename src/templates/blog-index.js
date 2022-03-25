@@ -23,9 +23,11 @@ const BlogIndex = function ({ pageContext, data, location }) {
       <aside>
         <Bio />
       </aside>
+      {/**
       <h3>
         {formatMessage('tfIndCountPosts', { count: data.allMarkdownRemark.totalCount, from, to })}
       </h3>
+    */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
