@@ -10,7 +10,7 @@ const {
   medium = '',
   facebook = '',
   disqusShortName = '',
-  lang = 'en',
+  lang = 'ar',
   googleTrackingId: trackingId,
 } = require('./config').site;
 const supportedLanguages = require('./config').supportedLanguages;
@@ -93,10 +93,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `مدونة حمود الباهلي`,
-        short_name: `GatsbyJS`,
+        short_name: `مدونة حمود الباهلي`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#55acee`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

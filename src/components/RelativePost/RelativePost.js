@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 import { rhythm } from 'utils/typography';
 import { formatDate } from 'utils/i18n';
 
-const RelativePost = function({ postNode }) {
+const RelativePost = function ({ postNode }) {
   const {
     fields: { slug },
     frontmatter: { title, date },
@@ -21,7 +21,6 @@ const RelativePost = function({ postNode }) {
         <header>
           <h3
             style={{
-              fontFamily: 'Montserrat, sans-serif',
               fontSize: rhythm(1),
               margin: `${rhythm(1 / 2)} ${rhythm(1 / 4)} 0`,
             }}
@@ -39,7 +38,7 @@ const RelativePost = function({ postNode }) {
       </article>
     </Link>
   );
-}
+};
 
 RelativePost.propTypes = {
   postNode: PropTypes.object.isRequired,

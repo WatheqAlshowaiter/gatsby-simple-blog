@@ -26,6 +26,7 @@
 
   padding-left: calc(var(--cssuiBreadcrumbsDividerSize) + var(--cssuiBreadcrumbsIndent));
   margin-left: var(--cssuiBreadcrumbsIndent);
+  margin-right: 0;
   margin-bottom: 0;
 
   color: var(--cssuiBreadcrumbsTextColor);

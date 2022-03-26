@@ -7,7 +7,7 @@ module.exports = {
   taIndKeywords: [`مدونة`, `gatsby`, `javascript`, `react`],
   tfIndCountPosts: ({ count, from, to }) => `${count} Posts (${from} - ${to})`,
   tfTagHeader: (totalCount, tag) =>
-    `${totalCount} المقالات${totalCount === 1 ? '' : 's'} الموسومة بالوسم: "${tag}"`,
-  t404Title: 'غير موجود',
-  t404Content: 'للأسف، لقد وصلت لصفحة غير موجودة أو حُدّثت',
+    `المقالات الموسومة بالوسم: "${tag}"`,
+  t404Title: 'صفحة غير موجودة',
+  t404Content: 'للأسف، لقد وصلت لصفحة غير موجودة أو حُدّثت.',
 };

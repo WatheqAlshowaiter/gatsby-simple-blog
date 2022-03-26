@@ -39,7 +39,7 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
           ...scale(-1 / 5),
           display: `block`,
           marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
+          marginTop: rhythm(-0.5),
         }}
       >
         {formatDate(post.frontmatter.date)}
@@ -77,7 +77,7 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
-            → {previous.frontmatter.title}
+              → {previous.frontmatter.title}
             </Link>
           )}
         </li>

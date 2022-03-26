@@ -10,7 +10,7 @@ const site = {
   facebook: '',
   disqusShortName: '',
   googleTrackingId: 'G-E7NM1ZBB2T',
-  lang: 'en',
+  lang: 'ar',
   displayTranslations: true,
   postsPerPage: 3,
 };

@@ -14,10 +14,6 @@ blockquote {
   opacity: 0.8;
 }
 
-h4 {
-  font-family: var(--systemFont);
-}
-
 img {
   margin-bottom: 0;
 }
