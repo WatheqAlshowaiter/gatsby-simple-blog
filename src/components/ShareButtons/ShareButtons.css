@@ -1,0 +1,35 @@
+.post-meta-share-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 0.875rem;
+  margin-bottom: 1.3rem;
+}
+
+.post-meta-share-icons button {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.post-meta-share-icons svg {
+  color: var(--theme-ui-colors-secondary, #5f6c80);
+  width: 32px;
+  height: 32px;
+}
+
+.post-meta-share-icons button:hover {
+  transform: scale(1.15);
+}
+
+.post-meta-share-icons button:focus {
+  outline: 0;
+}
+
+.post-meta-share-icons button:last-child {
+  margin-right: 0;
+}
+
+button.react-share__ShareButton svg:hover {
+  fill: currentColor;
+}

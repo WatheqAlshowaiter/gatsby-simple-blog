@@ -52,6 +52,8 @@ body.light {
   --linkBackground: rgba(187, 239, 253, 0.3);
   --linkBorder: rgba(0, 0, 0, 0.2);
   --pagination-bg: #55acee;
+  --twitter-bg: #1DA1F2;
+  --facebook-bg: #4267B2;
 }
 
 body.dark {
@@ -264,4 +266,8 @@ blockquote {
   padding-right: 1.42188rem;
   border-right: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
   border-left: none;
+}
+
+.gatsby-remark-prismjs-copy-button:hover {
+  background-color: var(--tag-bg) !important;
 }

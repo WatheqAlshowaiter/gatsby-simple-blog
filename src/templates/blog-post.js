@@ -9,6 +9,7 @@ import TagList from 'components/TagList';
 import RelativePosts from 'components/RelativePosts';
 import Disqus from 'components/Disqus';
 import TranslationsLink from 'components/TranslationsLink';
+import ShareButtons from 'components/ShareButtons';
 
 import { formatReadingTime } from 'utils/helpers';
 import { formatDate } from 'utils/i18n';
@@ -19,6 +20,9 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next, previousInSameTag, nextInSameTag, translationsLink } = pageContext;
+
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const description = post.frontmatter.description ? post.frontmatter.description : post.excerpt;
 
   const { lang, homeLink } = useLang();
 
@@ -57,11 +61,16 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
 
       <RelativePosts postNodes={[previousInSameTag, nextInSameTag]} lang={lang} />
 
+      <hr />
+
+      <ShareButtons url={url} title={post.frontmatter.title} description={description} />
+
       <hr
         style={{
           marginBottom: rhythm(1),
         }}
       />
+
       <Bio />
 
       <ul
@@ -74,7 +83,7 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
           marginLeft: 0,
         }}
       >
-        <li>
+        <li style={{ marginRight: 0 }}>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
               → {previous.frontmatter.title}

@@ -134,8 +134,10 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ x ] fix the position of `relative posts`
 - [ x ] enable arabic language as a default
 - [ x ] Change theme color
-- [ ] Add sharable icons via twitter & facebook
-- [ ] Change the Icon in the browser tab
+- [ x ] Add sharable icons via twitter & facebook
+- [ x ] Change the copy code text to arabic text & color to twitter blue
+- [ x ] Change the Icon in the browser tab
+- [ ] enable posts images to be shown in url in social media
 - [ ] combine this project with netlify-cms
 - [ ] change the siteUrl to the real domain
 
