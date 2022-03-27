@@ -3,7 +3,7 @@ const site = {
   title: 'مدونة حمود الباهلي',
   author: 'حمود الباهلي',
   description: 'حمود الباهلي - معد بودكاست لمحات. مهتم بالتاريخ والكتابة والسرد القصصي.',
-  siteUrl: 'http://localhost:8000/' /** TODO: it will be changed to the real domain */,
+  siteUrl: 'https://test-blog-123.netlify.app/' /** TODO: it will be changed to the real domain */,
   twitter: 'homoud_albahli',
   github: '',
   medium: '',
