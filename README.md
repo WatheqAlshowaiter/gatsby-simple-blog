@@ -137,7 +137,8 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ x ] Add sharable icons via twitter & facebook
 - [ x ] Change the copy code text to arabic text & color to twitter blue
 - [ x ] Change the Icon in the browser tab
-- [ ] enable posts images to be shown in url in social media
+- [ ] enable posts images to be shown in url in social media in this pages: post-index, post, tags, tag,
 - [ ] combine this project with netlify-cms
 - [ ] change the siteUrl to the real domain
+- [ ] remove all warnings from the code
 

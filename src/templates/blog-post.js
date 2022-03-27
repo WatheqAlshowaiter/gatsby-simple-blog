@@ -15,6 +15,7 @@ import { formatReadingTime } from 'utils/helpers';
 import { formatDate } from 'utils/i18n';
 import { rhythm, scale } from 'utils/typography';
 import { useLang } from 'context/LanguageContext';
+import { getImage, getSrc } from 'gatsby-plugin-image';
 
 const BlogPostTemplate = function ({ data, pageContext, location }) {
   const post = data.markdownRemark;
@@ -23,6 +24,11 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
 
   const url = typeof window !== 'undefined' ? window.location.href : '';
   const description = post.frontmatter.description ? post.frontmatter.description : post.excerpt;
+
+  const img = getImage(data.myImage);
+  // get img alt
+  const imgAlt = img.alt ? img.alt : post.frontmatter.title;
+  const imgSrc = data.site.siteMetadata.siteUrl + getSrc(img);
 
   const { lang, homeLink } = useLang();
 
@@ -36,6 +42,8 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={img}
+        imageAlt={imgAlt}
       />
       <h1>{post.frontmatter.title}</h1>
       <p
@@ -119,6 +127,7 @@ export const pageQuery = graphql`
         title
         author
         lang
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -135,6 +144,12 @@ export const pageQuery = graphql`
       }
       fields {
         langKey
+      }
+    }
+
+    myImage: file(relativePath: { eq: "profile-pic.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }

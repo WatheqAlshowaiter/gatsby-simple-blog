@@ -15,8 +15,8 @@ function formatPostDate(date, lang) {
 
   date = new Date(date);
 
-  //  we can change the formatting of the date here, for example: month: 'numeric'
-  const args = [lang, { day: 'numeric', month: 'short', year: 'numeric' }].filter(Boolean);
+  //  we can change the formatting of the date here, for example: month: 'numeric', '2-digit' for 01,02 numbers, 'short' for texts
+  const args = [lang, { day: '2-digit', month: 'short', year: 'numeric' }].filter(Boolean);
   return date.toLocaleDateString(...args);
 }
 
