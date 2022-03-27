@@ -141,4 +141,5 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ ] combine this project with netlify-cms
 - [ ] change the siteUrl to the real domain
 - [ ] remove all warnings from the code
+- [] fix all the title in <title> in every page post-index, post, tags, tag,
 

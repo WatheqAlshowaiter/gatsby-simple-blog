@@ -11,7 +11,6 @@ const {
   facebook = '',
   disqusShortName = '',
   lang = 'ar',
-  googleTrackingId: trackingId,
 } = require('./config').site;
 const supportedLanguages = require('./config').supportedLanguages;
 
@@ -83,12 +82,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId,
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
