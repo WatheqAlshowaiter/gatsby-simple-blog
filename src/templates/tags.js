@@ -9,10 +9,13 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import Layout from 'components/Layout';
+import SEO from 'components/SEO';
 import Tag from 'components/Tag';
 import Bio from 'components/Bio';
 import { useLang } from 'context/LanguageContext';
 import { formatMessage } from 'utils/i18n';
+import { rhythm, scale } from 'utils/typography';
+import { getImage, getSrc } from 'gatsby-plugin-image';
 
 const styles = {
   tagListDiv: {
@@ -21,28 +24,31 @@ const styles = {
   },
 };
 
-const TagsPage = function ({
-  data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
-  },
-  location,
-}) {
+const TagsPage = function ({ data, location }) {
   const { homeLink } = useLang();
   const tTags = formatMessage('tTags');
+  const description = formatMessage('tDescription');
+  const img = getImage(data.myImage);
+  const imgAlt = img.alt ? img.alt : formatMessage('tImageAltTagsPage');
 
   return (
-    <Layout location={location} title={title} breadcrumbs={[{ text: tTags }]}>
-      <aside>
-        <Bio />
-      </aside>
+    <Layout
+      location={location}
+      title={data.site.siteMetadata.title}
+      breadcrumbs={[{ text: tTags }]}
+    >
       <Helmet title={tTags} />
+      <SEO
+        title={tTags}
+        description={description}
+        keywords={formatMessage('taIndKeywords')}
+        image={img}
+        imageAlt={imgAlt}
+      />
       <div>
         <h1>{tTags}</h1>
         <div style={styles.tagListDiv}>
-          {group.map((tag) => (
+          {data.allMarkdownRemark.group.map((tag) => (
             <Tag
               key={tag.fieldValue}
               text={tag.fieldValue}
@@ -52,6 +58,14 @@ const TagsPage = function ({
           ))}
         </div>
       </div>
+      <aside>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <Bio />
+      </aside>
     </Layout>
   );
 };
@@ -72,6 +86,7 @@ TagsPage.propTypes = {
         lang: PropTypes.string.isRequired,
       }),
     }),
+    myImage: PropTypes.isRequired,
   }).isRequired,
   location: PropTypes.object.isRequired,
 };
@@ -84,12 +99,18 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         lang
+        siteUrl
       }
     }
     allMarkdownRemark(limit: 1000, filter: { fields: { langKey: { eq: $langKey } } }) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
+      }
+    }
+    myImage: file(relativePath: { glob: "blog-card4.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }

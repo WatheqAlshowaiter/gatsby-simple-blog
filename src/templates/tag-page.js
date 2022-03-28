@@ -11,6 +11,8 @@ import PostAbbrev from 'components/PostAbbrev';
 import Bio from 'components/Bio';
 import { useLang } from 'context/LanguageContext';
 import { formatMessage } from 'utils/i18n';
+import { rhythm, scale } from 'utils/typography';
+import { getImage, getSrc } from 'gatsby-plugin-image';
 
 const TagPageTemplate = function ({ pageContext, data, location }) {
   const { tag } = pageContext;
@@ -21,13 +23,26 @@ const TagPageTemplate = function ({ pageContext, data, location }) {
 
   const tagHeader = formatMessage('tfTagHeader', totalCount, tag);
 
+  const description = data.site.siteMetadata.description
+    ? data.site.siteMetadata.description
+    : formatMessage('tDescription');
+
+  const img = getImage(data.myImage);
+  const imgAlt = img.alt ? img.alt : formatMessage('tImageAltTagPage');
+
   return (
     <Layout
       location={location}
       title={siteTitle}
       breadcrumbs={[{ text: formatMessage('tTags'), url: `${homeLink}tags` }, { text: tag }]}
     >
-      <SEO title={tagHeader} description={tagHeader} />
+      <SEO
+        title={tagHeader}
+        description={description}
+        keywords={formatMessage('taIndKeywords')}
+        image={img}
+        imageAlt={imgAlt}
+      />
       <h1>{tagHeader}</h1>
       <main>
         {edges.map(({ node }) => {
@@ -47,6 +62,11 @@ const TagPageTemplate = function ({ pageContext, data, location }) {
       </main>
       <div style={{ marginTop: 50 }} />
       <aside>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
         <Bio />
       </aside>
     </Layout>
@@ -85,6 +105,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(
@@ -103,8 +124,14 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "YYYY/MM/DD")
+            description
           }
         }
+      }
+    }
+    myImage: file(relativePath: { glob: "blog-card4.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }

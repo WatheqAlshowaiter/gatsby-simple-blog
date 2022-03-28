@@ -9,6 +9,7 @@ import PostAbbrev from 'components/PostAbbrev';
 import Pagination from 'components/Pagination';
 import { useLang } from 'context/LanguageContext';
 import { formatMessage } from 'utils/i18n';
+import { getImage, getSrc } from 'gatsby-plugin-image';
 
 const BlogIndex = function ({ pageContext, data, location }) {
   const { from, to, currentPage, numPages } = pageContext;
@@ -17,9 +18,21 @@ const BlogIndex = function ({ pageContext, data, location }) {
 
   const { lang, homeLink } = useLang();
 
+  const img = getImage(data.myImage);
+  const imgAlt = img.alt ? img.alt : formatMessage('tIndTitle');
+  const description = data.site.siteMetadata.description
+    ? data.site.siteMetadata.description
+    : formatMessage('tDescription');
+
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={formatMessage('tIndTitle')} keywords={formatMessage('taIndKeywords')} />
+      <SEO
+        title={formatMessage('tIndTitle')}
+        keywords={formatMessage('taIndKeywords')}
+        description={description}
+        image={img}
+        imageAlt={imgAlt}
+      />
       <aside>
         <Bio />
       </aside>
@@ -64,6 +77,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        lang
+        siteUrl
       }
     }
     allMarkdownRemark(
@@ -88,6 +103,11 @@ export const pageQuery = graphql`
             tags
           }
         }
+      }
+    }
+    myImage: file(relativePath: { glob: "blog-card4.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }
