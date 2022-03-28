@@ -147,7 +147,7 @@ export const pageQuery = graphql`
       }
     }
 
-    myImage: file(relativePath: { glob: "blog-card2.png" }) {
+    myImage: file(relativePath: { glob: "blog-card4.png" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED)
       }

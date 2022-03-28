@@ -137,9 +137,14 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ x ] Add sharable icons via twitter & facebook
 - [ x ] Change the copy code text to arabic text & color to twitter blue
 - [ x ] Change the Icon in the browser tab
-- [ ] enable posts images to be shown in url in social media in this pages: post-index, post, tags, tag,
+- [ ] look at the image quality option in gatsby-image if it helps
+- [ ] enable posts images to be shown in twitter (for these pages: blog-index, tags, tag)
+- [ ] enable posts images to be shown in facebook (for these pages: blog-index, tags, tag)
+- [ ] enhance the post static image for social media (now its blurry)
+- [ ] enable dynamic (thumbnail or cover)  to be shown in twitter and facebook links in the blog-post pages
+- [ ] if there is no thumbnail choose any image in the post or the default static image
 - [ ] combine this project with netlify-cms
 - [ ] change the siteUrl to the real domain
 - [ ] remove all warnings from the code
-- [] fix all the title in <title> in every page post-index, post, tags, tag,
+- [ ] fix all the title in <title> in every page post-index, post, tags, tag,
 
