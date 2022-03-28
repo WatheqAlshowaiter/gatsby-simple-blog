@@ -137,10 +137,11 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ x ] Add sharable icons via twitter & facebook
 - [ x ] Change the copy code text to arabic text & color to twitter blue
 - [ x ] Change the Icon in the browser tab
-- [ ] look at the image quality option in gatsby-image if it helps
+- [ x ] look at the image quality option in gatsby-image if it helps
 - [ ] enable posts images to be shown in twitter (for these pages: blog-index, tags, tag)
 - [ ] enable posts images to be shown in facebook (for these pages: blog-index, tags, tag)
-- [ ] enhance the post static image for social media (now its blurry)
+- [ x ] add upper line above the bio in tag page and tags page
+- [ x ] make the bio in the footer in tags page like other pages, except blog-index
 - [ ] enable dynamic (thumbnail or cover)  to be shown in twitter and facebook links in the blog-post pages
 - [ ] if there is no thumbnail choose any image in the post or the default static image
 - [ ] combine this project with netlify-cms
