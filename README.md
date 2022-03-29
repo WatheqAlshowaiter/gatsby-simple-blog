@@ -148,4 +148,6 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ ] change the siteUrl to the real domain
 - [ ] remove all warnings from the code
 - [ ] fix all the title in <title> in every page post-index, post, tags, and tag
+- [ ] change the card-blog4.png to a better image name and remove other images
+- [ ] change profile-pic for a higher quality image
 
