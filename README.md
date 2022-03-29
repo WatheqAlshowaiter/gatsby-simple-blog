@@ -150,4 +150,5 @@ This project is licensed under the terms of the [MIT license](/LICENSE).
 - [ ] fix all the title in <title> in every page post-index, post, tags, and tag
 - [ ] change the card-blog4.png to a better image name and remove other images
 - [ ] change profile-pic for a higher quality image
+- [ ] configure the post-per-page as the customer wants
 
