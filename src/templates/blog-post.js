@@ -107,7 +107,7 @@ const BlogPostTemplate = function ({ data, pageContext, location }) {
         </li>
       </ul>
 
-      <Disqus identifier={post.id} show={post.frontmatter.disqus} title={post.frontmatter.title} />
+      {/** <Disqus identifier={post.id} show={post.frontmatter.disqus} title={post.frontmatter.title} /> */}
     </Layout>
   );
 };
@@ -140,7 +140,6 @@ export const pageQuery = graphql`
         date(formatString: "YYYY/MM/DD")
         description
         tags
-        disqus
       }
       fields {
         langKey
