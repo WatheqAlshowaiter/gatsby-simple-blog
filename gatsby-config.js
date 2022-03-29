@@ -129,5 +129,6 @@ module.exports = {
     //     gaConfigPath: 'gaConfig.json',
     //   },
     // },
+    'gatsby-plugin-netlify-cms',
   ],
 };
